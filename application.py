@@ -13,6 +13,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 from feature_engineering import hand_features
 
+model = joblib.load("model_mnb.pkl")
 
 application = Flask(__name__)
 
@@ -33,11 +34,6 @@ def predict():
     
 
 if __name__=='__main__':
-    
-
-    model = joblib.load("model_mnb.pkl")
-    print("model loaded")
-    # put other things as per required to load your model
-
-
-    application.run(port= port, debug= True)
+   
+    application.debug= True
+    application.run()

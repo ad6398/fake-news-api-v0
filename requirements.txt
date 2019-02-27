@@ -14,4 +14,5 @@ singledispatch==3.4.0.3
 six==1.12.0
 sklearn==0.0
 tqdm==4.31.1
+uwsgi
 Werkzeug==0.14.1
